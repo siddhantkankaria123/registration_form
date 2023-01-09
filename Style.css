@@ -1,0 +1,57 @@
+.blue-text{
+    color:darkblue;
+}
+.black-text{
+    color:black;
+}
+.underline-h{
+    text-decoration: underline;
+}
+#bg{
+    background-color:white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius:1% ;
+    height:60%;
+    width: 50%;
+    padding-left:10%;
+    margin-left: 25%;
+    margin-bottom: 15%;
+    color:black;
+    text-align: justify ;
+    direction: ltr;
+    font-size: 30px;
+    font-weight: bold;
+    
+
+}
+p{
+    font-size: 30px;
+}
+#stu{
+    padding-left:30%;
+    font-size: 65px;
+    
+}
+
+body{
+    background-color:lightblue;
+}
+input{
+    font-size: 30px;
+}
+select{
+    font-size: 30px;
+}
+input[type=submit ]{
+    background-color:white;
+    font-size: 35px;
+   margin-left: 37%;
+   margin-top: 5%;
+    
+}
+
+
+
+

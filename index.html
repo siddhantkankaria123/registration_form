@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           REGISTRATION FORM
+        </title>
+        
+        <meta name="viewport" content="width=width-device,initial-scale=1.0">
+        <script> alert("Welcome to Student Registeration Form");</script>
+        <style>
+            .blue-text{
+                color:darkblue;
+            }
+            .black-text{
+                color:black;
+            }
+            .underline-h{
+                text-decoration: underline;
+            }
+            #bg{
+                background-color:white;
+                border: 3px solid white;
+                border-radius:1% ;
+                height:60%;
+                width: 80%;
+                padding-left:10%;
+                margin-left: 5%;
+                margin-bottom: 15%;
+                color:black;
+                text-align: justify ;
+                direction: ltr;
+                font-size: 14px;
+                font-weight: bold;
+                background-image: url('favicon.png');
+
+            }
+            p{
+                font-size: 30px;
+            }
+            #stu{
+                /* padding-left:30%; */
+                text-align: center;
+                font-size: 30px;
+                
+            }
+
+            body{
+                background-color:lightblue;  
+                
+                /* background-image: linear-gradient(210deg,orange,darkblue); */
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-size:cover;
+                background-repeat: no-repeat;
+            }
+            
+            input{
+                font-size: 14px;
+            }
+            select{
+                font-size: 15px;
+            }
+            input[type=submit ]{
+                background-color:white;
+                font-size: 13px;
+                 margin-left: 37%;
+                margin-top: 5%;
+            }
+           
+
+        </style>
+        
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        
+        
+        <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/004/581/258/small/pencil-and-paper-note-icon-editorial-edit-file-and-writing-symbol-illustration-free-vector.jpg">
+
+        
+    </head>
+    <body>
+        
+      <div id="divv1">
+        
+                          <h1><p id="stu" class="black-text underline-h">STUDENT REGISTRATION FORM</p></h2>
+                         <form id="registrationForm" autocomplete="on" name="resgisteration-form">
+           
+      
+                     <fieldset id="bg" >
+                            <label for="fname"><b >FIRST NAME&nbsp;&nbsp;</b></label>
+                            <input type="text" name="first_name" id="fName" placeholder="First Name" required>
+            
+
+           <br><br>
+
+                            <label for="Lname"><b>LAST NAME&nbsp;&nbsp;</b></label>
+                            <input type=" text"  name=" last_name" id="lName"  placeholder="Last Name" required>
+            
+
+             <br><br>
+
+                            <label for="Dob"><b> DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="date" id="dob"  required>
+
+             <br><br>
+
+                            <label><b>GENDER</b></label>
+             <br><br>
+                            <input type="radio" name="gender" >&nbsp;&nbsp;MALE<br><br>
+                            <input type="radio" name="gender">&nbsp;&nbsp;FEMALE<br><br>
+                            <input type="radio" name="gender">&nbsp;&nbsp;OTHER
+             
+             <br><br>
+
+                        <label for="address"><b> ADDRESS</b>  </label>
+                        <input type="text" name="address" size="40"  placeholder="Enter Address" maxlength="50"      id="address" required >
+            
+            <br><br>
+            
+                        <label for="mob_no"><b> MOBILE NO&nbsp;&nbsp;</b> </label>
+                        <input type="number" name="mob_no" id="mobNo" placeholder="Enter Mobile No" required>
+            
+            <br><br>
+            
+                        <label for="mail"><b> EMAIL-ID&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                        <input type="email" id="mail" size="30" placeholder="Enter Email" maxlength="40" required>
+            <br><br>
+                        <label><b>CITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                        <input type="text" placeholder="Enter City" id="city">
+            <br>
+            <br>
+           
+                        <label><b>STATE&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                        <select id="state">
+                            <option value="" ><h2>SELECT State</h2></option>
+                            <option value="select state">RAJASTHAN</option>
+                            <option value="select state">PUNJAB</option>
+                            <option value="select state">KERALA</option>
+                        </select>
+            
+            
+            <br>
+            <br>
+
+                        <label><b>PIN-CODE</b></label>
+                        <input type="number" placeholder="Pincode" id="pincode">
+            <br>
+            <br>
+                        <label><b>QUALIFICATION</b></label>
+                        <select id="quaification">
+                                <option value=""><h2>SELECT Qualification </h2></option>
+
+                                <option value="1">Higher secondary</option>
+                                <option value="2">Senior secondary</option>
+                                <option value="3">UG</option>
+                                <option value="4">PG</option>
+
+                        </select>
+            <br><br>
+                    <div>
+                        <input type="submit" value="Submit-Form" required>
+                    </div>
+            
+                </fieldset>
+       
+           
+           
+           
+          
+           
+       </form>
+    </div>
+</body>
+<!-- <script> alert("Form Submitted sucessfully");</script> -->
+    <!-- <script>  alert('Form Submitted sucessfully')</script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script>
+      const firebaseApp = firebase.initializeApp({
+    apiKey: "AIzaSyDH4s3tSsiL2a18EpSKPH5Wnox7dfbVtLs",
+    authDomain: "student-registeration-fo-fc92f.firebaseapp.com",
+    databaseURL: "https://student-registeration-fo-fc92f-default-rtdb.firebaseio.com",
+    projectId: "student-registeration-fo-fc92f",
+    storageBucket: "student-registeration-fo-fc92f.appspot.com",
+    messagingSenderId: "584294794507",
+    appId: "1:584294794507:web:771aeb8afef0d19ad70e0e"
+  });
+      const db = firebaseApp.firestore();
+      const auth = firebaseApp.auth();
+    </script>
+    
+    </script>
+    <script src="fire.js"></script>
+</html>
